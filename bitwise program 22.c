@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    //Your Code goes here!
+    int n,k;
+    scanf("%d %d", &n, &k);
+    printf("%d", n^(1 << k));
+    
+    return 0;
+}
