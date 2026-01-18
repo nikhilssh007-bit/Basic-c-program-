@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    //Your Code goes here!
+    char str[100];
+    int i, len = 0;
+
+    scanf("%s", str);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        len++;
+    }
+
+    printf("%d", len);
+    return 0;
+}
