@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    //Your Code goes here!
+    int n;
+    scanf("%d",&n);
+    if(n > 0,n&(n-1)==0)
+    printf("NO");
+    else
+    printf("YES");
+    return 0;
+}
