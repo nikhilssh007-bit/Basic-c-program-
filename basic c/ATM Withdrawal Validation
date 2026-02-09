@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    //Your Code goes here!
+    int amount;
+    scanf("%d",&amount);
+    if(amount % 100 == 0)
+    printf("valid amount");
+    else
+    printf("invalid amount");
+    return 0;
+}
