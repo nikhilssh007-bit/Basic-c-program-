@@ -1,0 +1,49 @@
+int sensorPin = 2;
+
+int greenLED = 12;
+int redLED = 13;
+
+int buzzer = 8;
+
+void setup() {
+
+  pinMode(sensorPin, INPUT);
+
+  pinMode(greenLED, OUTPUT);
+  pinMode(redLED, OUTPUT);
+
+  pinMode(buzzer, OUTPUT);
+
+  digitalWrite(greenLED, HIGH);
+  digitalWrite(redLED, LOW);
+}
+
+void loop() {
+
+  int sensorValue = digitalRead(sensorPin);
+
+  if (sensorValue == LOW) {
+
+    digitalWrite(greenLED, LOW);
+
+    digitalWrite(redLED, HIGH);
+
+    // Loud buzzer sound
+    tone(buzzer, 3000);
+    delay(100);
+
+    digitalWrite(redLED, LOW);
+
+    noTone(buzzer);
+    delay(100);
+  }
+
+  else {
+
+    digitalWrite(greenLED, HIGH);
+
+    digitalWrite(redLED, LOW);
+
+    noTone(buzzer);
+  }
+}
